@@ -1,0 +1,20 @@
+.headercontinaer{
+    width: auto;
+    height: 40px;
+    background-color: cornflowerblue;
+}
+a{
+    color: white;
+}
+a:hover{
+ 
+   background-color: white;
+ 
+}
+.headercontinaer h3{
+    margin-right: 680px;
+}
+
+
+
+

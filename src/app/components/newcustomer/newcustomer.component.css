@@ -1,0 +1,17 @@
+.newCustomerview{
+    width: 700px;
+    margin-left: 250px;
+    margin-right: 150px;
+    background-color: rgb(211, 219, 235);
+    border-radius: 10px;
+    height: 400px;
+}
+.newCustomerheading{
+    text-align: center;
+}
+.row{
+   padding: 10px;
+}
+.newCustomerbtn{
+    text-align: center;
+}

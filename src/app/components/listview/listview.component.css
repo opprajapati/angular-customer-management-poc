@@ -1,0 +1,18 @@
+.tImage{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+.mat-elevation-z8{
+    margin-left: 10px;
+    margin-right: 120px;
+}
+.mat-elevation-z8 p-table{
+    margin-left: 20px;
+}
+.paginator{
+    margin-right: 400px;
+}
+ng-template tr th {
+    margin-left: 10px;
+}

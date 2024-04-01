@@ -1,0 +1,71 @@
+<!-- <p-table [value]="allCustomers" [tableStyle]="{'min-width': '60rem'}">
+    <ng-template pTemplate="caption">
+        <div class="flex align-items-center justify-content-between">
+            Products
+            <p-button icon="pi pi-refresh"></p-button>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Sr.</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Reviews</th>
+            <th>Status</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            <td>{{allCustomers.id}}</td>
+            <td>{{allCustomers.name}}</td>
+            <td><img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.image" [alt]="product.name" width="100" class="shadow-4" /></td>
+            <td>{{product.price | currency:'USD'}}</td>
+            <td>{{product.category}}</td>
+            <td><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td>
+            <td><p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag></td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+        <div class="flex align-items-center justify-content-between">
+            In total there are {{products ? products.length : 0 }} products.
+        </div>
+    </ng-template>
+</p-table> -->
+
+
+
+<div class="mat-elevation-z8">
+    <p-table [value]="allCustomers"  [tableStyle]="{'min-width': '60rem'}">
+        <ng-template pTemplate="caption">
+            <div class="flex align-items-center justify-content-between">
+                <strong>Products</strong>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Sr</th>
+                <th>Name</th>
+                <th>Profile</th>
+                <th>Location</th>
+                <th>Edit</th>
+                <th>Orders</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{product.id}}</td>
+                <td>{{product.name}}</td>
+                <td><img src="assets/clay-elliot-mpDV4xaFP8c-unsplash.jpg " class="tImage" /></td>
+                <td>{{product.address}}</td>
+                <td><a class="btn btn-primary" (click)="onEditUser()">Edit</a></td>
+                <td><button class="btn btn-danger" >Delete</button></td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+<div class="paginator"><mat-paginator [length]="100" [pageSizeOptions]="[10, 20, 30]" aria-label="Select page">
+</mat-paginator></div> 
+<router-outlet></router-outlet>
+

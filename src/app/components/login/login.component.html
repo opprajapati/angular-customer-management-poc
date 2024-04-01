@@ -1,0 +1,25 @@
+<div class="loginpage">
+   <div class="loginHeading">
+    <svg xmlns="http://www.w3.org/2000/svg" width="76" height="36" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2"/>
+      </svg> <h4> Login</h4>
+   </div>
+   <form name="loginForm" #f="ngForm" (ngSubmit)="onSubmit()">
+   <div class="logininput">
+    <label> Email:</label>&nbsp;&nbsp;&nbsp; &nbsp;
+  <input type="text" [(ngModel)]="loginForm.email" [ngModelOptions]="{standalone: true}" >
+  <!-- <div *ngIf="loginForm.email.length>0">
+  Email is Required*
+  </div> -->
+    <label>Password:</label>
+  <input type="password" [(ngModel)]="loginForm.password"[ngModelOptions]="{standalone: true}"  >
+  <!-- <div *ngIf="loginForm.password.length>0">
+    Email is Required*
+    </div> -->
+</div>
+<button class="btn btn-primary">Login</button> 
+
+  </form>
+
+</div>
+
